@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+    <script>
+        function check(form) {
+            if (form.uname.value == "user" && form.pword.value == "123") {
+                window.close('index.html');
+                window.open('Home.html');
+            } else {
+                alert("Error, Username and password are wrong");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="background">
+        <center>
+            <h2>Login</h2>
+            <form>
+                <label>Name</label><br>
+                <input type="text" name="uname" placeholder="Username"/><br>
+                <label>Password</label><br>
+                <input type="password" name="pword" placeholder="Password"><br>
+                <button type="button" onclick="check(this.form)">Login</button><br>
+                
+            </form>
+        </center>
+    </div>
+</body>
+</html>
+
+

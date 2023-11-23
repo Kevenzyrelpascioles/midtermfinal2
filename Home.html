@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function logout() {
+            let response = confirm("Are you sure you want to logout?");
+            if (response) {
+                window.close('Home.html');
+                window.open('index.html');
+            }
+        }
+    </script>
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    
+    <div> 
+        <h1>Number Guessing Game</h1>
+        <label for="guess">Enter your guess (1-10):</label>
+        <input type="text" id="guess" />
+        <button onclick="checkGuess()">Submit Guess</button>
+        <p id="feedback"></p>
+        <button id="retryButton" onclick="retryGame()" disabled>Retry</button>
+    </div>
+
+    <script src="script.js"></script>
+    <button type="button" id="logout-button" onclick="logout()">Logout</button>
+</body>
+</html>
